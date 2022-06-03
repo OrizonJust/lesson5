@@ -19,4 +19,9 @@ public class HelloShell {
     public String helloTo(@ShellOption({"username"}) String username) {
         return helloService.helloTo(username);
     }
+
+    @ShellMethod(key = "goodbye", value = "Say goodbye to username")
+    public String goodbye(@ShellOption({"username"}) String username) {
+        return helloService.goodbye(username);
+    }
 }
